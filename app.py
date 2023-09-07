@@ -1,12 +1,12 @@
-from flask import Flask 
+from flask import Flask
 from crypto import client,symbol 
 
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def hello():
-    return "Binance API"
-
+    return "The Binance API"
+ 
 @app.route('/balance', methods=['GET'])
 def get_balance():
     balance = client.futures_account_balance()
